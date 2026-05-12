@@ -1,6 +1,5 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-flatpickr('#datetime-picker', options);
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -13,7 +12,6 @@ const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
-console.log(inputEl);
 
 startBTN.disabled = true;
 startBTN.addEventListener('click', setTimer);
@@ -40,6 +38,8 @@ const options = {
     userSelectedDate = selectedDate;
   },
 };
+
+flatpickr('#datetime-picker', options);
 
 function setTimer() {
   startBTN.disabled = true;

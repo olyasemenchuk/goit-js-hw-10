@@ -26,12 +26,12 @@ function onFormSubmit(event) {
   promise
     .then(delay => {
       iziToast.success({
-        message: `✅ Fulfilled promise in ${delayEl.value}ms`,
+        message: `✅ Fulfilled promise in ${delay}ms`,
       });
     })
     .catch(delay => {
       iziToast.error({
-        message: `❌ Rejected promise in ${delayEl.value}ms`,
+        message: `❌ Rejected promise in ${delay}ms`,
       });
     });
 }
